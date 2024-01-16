@@ -2,7 +2,7 @@
 //  VideoTable+CoreDataProperties.swift
 //  FaceVideoApp
 //
-//  Created by Najran Emarah on 28/06/1445 AH.
+//  Created by Najran Emarah on 01/07/1445 AH.
 //
 //
 
@@ -17,9 +17,10 @@ extension VideoTable {
     }
 
     @NSManaged public var duration: Float
-    @NSManaged public var tag: String?
-    @NSManaged public var video: Data?
+    @NSManaged public var frontImage: String?
     @NSManaged public var id: UUID?
+    @NSManaged public var tag: String?
+    @NSManaged public var video: String?
 
 }
 
