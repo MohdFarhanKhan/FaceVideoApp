@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct FaceVideoAppApp: App {
-    let persistenceController = PersistenceController.shared
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    let persistentStorage = PersistentStorage.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            HomeView()
+                .environment(\.managedObjectContext, persistentStorage.context)
         }
     }
 }

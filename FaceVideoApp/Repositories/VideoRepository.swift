@@ -35,7 +35,8 @@ private func isVideoPresent(id: UUID, completionHandler:@escaping(_ result: Bool
     }
    
 }
-    private func updateVideo(video: Video, completionHandler:@escaping(_ result: Bool)-> Void){
+    
+     func updateVideo(video: Video, completionHandler:@escaping(_ result: Bool)-> Void){
         let fetchRequest: NSFetchRequest<VideoTable>
         fetchRequest = VideoTable.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "id == %@ ",
@@ -44,9 +45,12 @@ private func isVideoPresent(id: UUID, completionHandler:@escaping(_ result: Bool
         do{
             let result = try context.fetch(fetchRequest)
             if result.count >= 1{
+                
                 result[0].duration = video.duration
                 result[0].tag = video.tag
                 result[0].video = video.video
+                result[0].frontImage = video.frontImage
+                try context.save()
                 completionHandler(true)
             }
             else{
@@ -59,6 +63,7 @@ private func isVideoPresent(id: UUID, completionHandler:@escaping(_ result: Bool
         }
        
     }
+    
     func saveMovie(video: Video,completionHandler:@escaping (_ result: String) -> ()){
        
        isVideoPresent(id: video.id) { [self] result in
@@ -69,11 +74,12 @@ private func isVideoPresent(id: UUID, completionHandler:@escaping(_ result: Bool
                
             }
             else{
-                var videoCoreData = VideoTable(context: PersistentStorage.shared.context)
+                let videoCoreData = VideoTable(context: PersistentStorage.shared.context)
                 videoCoreData.id = video.id
                 videoCoreData.duration = video.duration
                 videoCoreData.tag = video.tag
                 videoCoreData.video = video.video
+                videoCoreData.frontImage = video.frontImage
                 
                 do{
                     try PersistentStorage.shared.context.save()
@@ -96,7 +102,7 @@ private func isVideoPresent(id: UUID, completionHandler:@escaping(_ result: Bool
         if result.count == 0 { completionHandler(nil)}
         var videos = [Video]()
         for video in result{
-            videos.append(Video(id: video.id!, duration: video.duration, tag: video.tag,video: video.video))
+            videos.append(Video(id: video.id!, duration: video.duration, tag: video.tag,video: video.video, frontImage: video.frontImage))
         }
         completionHandler(videos)
        

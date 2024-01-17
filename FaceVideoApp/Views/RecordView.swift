@@ -7,12 +7,26 @@
 
 import SwiftUI
 
-struct RecordView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+struct RecordView: UIViewControllerRepresentable {
+   
+    @State var mustachOptions:[String] = []
+    typealias UIViewControllerType = VideoRecordViewController
+    func makeUIViewController(context: Context) -> VideoRecordViewController {
+        let vc = VideoRecordViewController()
+        
+        vc.moustachOptions = mustachOptions
+       
+        print(vc.moustachOptions)
+        
+                // Do some configurations here if needed.
+                return vc
+        }
+        
+        func updateUIViewController(_ uiViewController: VideoRecordViewController, context: Context) {
+            // Updates the state of the specified view controller with new information from SwiftUI.
+        }
 }
 
 #Preview {
-    RecordView()
+    RecordView() as any View
 }

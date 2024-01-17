@@ -7,30 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B2C9E882B51C14A005D9560 /* VideoTable+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C9E862B51C14A005D9560 /* VideoTable+CoreDataClass.swift */; };
+		7B2C9E892B51C14A005D9560 /* VideoTable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C9E872B51C14A005D9560 /* VideoTable+CoreDataProperties.swift */; };
+		7B2C9E8D2B520A45005D9560 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C9E8C2B520A45005D9560 /* PlayerView.swift */; };
+		7BD2D3D42B567B1F00686A61 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2D3D32B567B1F00686A61 /* HomeView.swift */; };
+		7BD2D3D82B567FA500686A61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2D3D72B567FA500686A61 /* AppDelegate.swift */; };
+		7BE080572B4FF8D1006CCB99 /* VideoRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE080562B4FF8D1006CCB99 /* VideoRecordViewController.swift */; };
+		7BE080592B4FF9ED006CCB99 /* FaceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE080582B4FF9ED006CCB99 /* FaceNode.swift */; };
+		7BE0805B2B4FFC51006CCB99 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE0805A2B4FFC51006CCB99 /* RecordView.swift */; };
+		7BE0805D2B501671006CCB99 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE0805C2B501671006CCB99 /* Services.swift */; };
 		7BF27BA52B4D75F600B96307 /* FaceVideoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF27BA42B4D75F600B96307 /* FaceVideoAppApp.swift */; };
-		7BF27BA72B4D75F600B96307 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF27BA62B4D75F600B96307 /* ContentView.swift */; };
 		7BF27BA92B4D75FB00B96307 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BF27BA82B4D75FB00B96307 /* Assets.xcassets */; };
 		7BF27BAC2B4D75FB00B96307 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BF27BAB2B4D75FB00B96307 /* Preview Assets.xcassets */; };
 		7BF27BB12B4D75FB00B96307 /* FaceVideoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BF27BAF2B4D75FB00B96307 /* FaceVideoApp.xcdatamodeld */; };
 		7BF27BB92B4D791300B96307 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF27BB82B4D791300B96307 /* PersistentStorage.swift */; };
 		7BF27BC22B4DE1F100B96307 /* VideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF27BC12B4DE1F100B96307 /* VideoRepository.swift */; };
-		7BF27BC52B4DE27600B96307 /* VideoTable+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF27BC32B4DE27600B96307 /* VideoTable+CoreDataClass.swift */; };
-		7BF27BC62B4DE27600B96307 /* VideoTable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF27BC42B4DE27600B96307 /* VideoTable+CoreDataProperties.swift */; };
 		7BF27BC92B4DE35600B96307 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF27BC82B4DE35600B96307 /* Video.swift */; };
 		7BF27BCC2B4DEC1C00B96307 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF27BCB2B4DEC1C00B96307 /* VideoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B2C9E862B51C14A005D9560 /* VideoTable+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoTable+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		7B2C9E872B51C14A005D9560 /* VideoTable+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoTable+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		7B2C9E8C2B520A45005D9560 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		7BD2D3D32B567B1F00686A61 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7BD2D3D72B567FA500686A61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7BD2D3D92B56853700686A61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7BE080562B4FF8D1006CCB99 /* VideoRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordViewController.swift; sourceTree = "<group>"; };
+		7BE080582B4FF9ED006CCB99 /* FaceNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceNode.swift; sourceTree = "<group>"; };
+		7BE0805A2B4FFC51006CCB99 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		7BE0805C2B501671006CCB99 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		7BF27BA12B4D75F600B96307 /* FaceVideoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceVideoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF27BA42B4D75F600B96307 /* FaceVideoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceVideoAppApp.swift; sourceTree = "<group>"; };
-		7BF27BA62B4D75F600B96307 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7BF27BA82B4D75FB00B96307 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BF27BAB2B4D75FB00B96307 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7BF27BB02B4D75FB00B96307 /* FaceVideoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FaceVideoApp.xcdatamodel; sourceTree = "<group>"; };
 		7BF27BB82B4D791300B96307 /* PersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
 		7BF27BC12B4DE1F100B96307 /* VideoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRepository.swift; sourceTree = "<group>"; };
-		7BF27BC32B4DE27600B96307 /* VideoTable+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoTable+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		7BF27BC42B4DE27600B96307 /* VideoTable+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoTable+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		7BF27BC82B4DE35600B96307 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		7BF27BCB2B4DEC1C00B96307 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +59,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7BE080552B4FD7EA006CCB99 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7BE080562B4FF8D1006CCB99 /* VideoRecordViewController.swift */,
+				7BE0805A2B4FFC51006CCB99 /* RecordView.swift */,
+				7BD2D3D32B567B1F00686A61 /* HomeView.swift */,
+				7B2C9E8C2B520A45005D9560 /* PlayerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7BF27B982B4D75F600B96307 = {
 			isa = PBXGroup;
 			children = (
@@ -65,13 +89,15 @@
 		7BF27BA32B4D75F600B96307 /* FaceVideoApp */ = {
 			isa = PBXGroup;
 			children = (
+				7BD2D3D92B56853700686A61 /* Info.plist */,
+				7BE080552B4FD7EA006CCB99 /* Views */,
 				7BF27BCA2B4DEBE700B96307 /* ViewModels */,
 				7BF27BC72B4DE33F00B96307 /* Models */,
 				7BF27BC02B4DE19100B96307 /* Repositories */,
 				7BF27BBF2B4D7A7100B96307 /* CoredataSubClasses */,
 				7BF27BB72B4D78DC00B96307 /* PersistentStorage */,
 				7BF27BA42B4D75F600B96307 /* FaceVideoAppApp.swift */,
-				7BF27BA62B4D75F600B96307 /* ContentView.swift */,
+				7BD2D3D72B567FA500686A61 /* AppDelegate.swift */,
 				7BF27BA82B4D75FB00B96307 /* Assets.xcassets */,
 				7BF27BAF2B4D75FB00B96307 /* FaceVideoApp.xcdatamodeld */,
 				7BF27BAA2B4D75FB00B96307 /* Preview Content */,
@@ -98,8 +124,8 @@
 		7BF27BBF2B4D7A7100B96307 /* CoredataSubClasses */ = {
 			isa = PBXGroup;
 			children = (
-				7BF27BC32B4DE27600B96307 /* VideoTable+CoreDataClass.swift */,
-				7BF27BC42B4DE27600B96307 /* VideoTable+CoreDataProperties.swift */,
+				7B2C9E862B51C14A005D9560 /* VideoTable+CoreDataClass.swift */,
+				7B2C9E872B51C14A005D9560 /* VideoTable+CoreDataProperties.swift */,
 			);
 			path = CoredataSubClasses;
 			sourceTree = "<group>";
@@ -116,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				7BF27BC82B4DE35600B96307 /* Video.swift */,
+				7BE080582B4FF9ED006CCB99 /* FaceNode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				7BF27BCB2B4DEC1C00B96307 /* VideoViewModel.swift */,
+				7BE0805C2B501671006CCB99 /* Services.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -198,14 +226,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BF27BC62B4DE27600B96307 /* VideoTable+CoreDataProperties.swift in Sources */,
+				7BE0805D2B501671006CCB99 /* Services.swift in Sources */,
+				7BE080592B4FF9ED006CCB99 /* FaceNode.swift in Sources */,
+				7BE0805B2B4FFC51006CCB99 /* RecordView.swift in Sources */,
+				7BD2D3D82B567FA500686A61 /* AppDelegate.swift in Sources */,
+				7BD2D3D42B567B1F00686A61 /* HomeView.swift in Sources */,
 				7BF27BCC2B4DEC1C00B96307 /* VideoViewModel.swift in Sources */,
+				7B2C9E882B51C14A005D9560 /* VideoTable+CoreDataClass.swift in Sources */,
 				7BF27BB12B4D75FB00B96307 /* FaceVideoApp.xcdatamodeld in Sources */,
-				7BF27BA72B4D75F600B96307 /* ContentView.swift in Sources */,
+				7B2C9E892B51C14A005D9560 /* VideoTable+CoreDataProperties.swift in Sources */,
 				7BF27BB92B4D791300B96307 /* PersistentStorage.swift in Sources */,
+				7B2C9E8D2B520A45005D9560 /* PlayerView.swift in Sources */,
+				7BE080572B4FF8D1006CCB99 /* VideoRecordViewController.swift in Sources */,
 				7BF27BC22B4DE1F100B96307 /* VideoRepository.swift in Sources */,
 				7BF27BC92B4DE35600B96307 /* Video.swift in Sources */,
-				7BF27BC52B4DE27600B96307 /* VideoTable+CoreDataClass.swift in Sources */,
 				7BF27BA52B4D75F600B96307 /* FaceVideoAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,17 +377,19 @@
 				DEVELOPMENT_TEAM = CV5PH9M8H9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = FaceVideoApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "FaceVideoApp needs access to camera";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "microphone use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.FaceVideoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.Vision-Face-Detection";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -372,17 +408,19 @@
 				DEVELOPMENT_TEAM = CV5PH9M8H9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = FaceVideoApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "FaceVideoApp needs access to camera";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "microphone use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.FaceVideoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.Vision-Face-Detection";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

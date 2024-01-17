@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E61454AF-3937-424B-A631-8C09B38A54D7"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84F03516-CFED-44FF-971A-15967CBAEE21"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FaceVideoApp/ViewModels/Services.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "getUIImage(imageData:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BCAE2927-D0F3-489B-8B0D-7CDCB23FD76A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FaceVideoApp/ViewModels/Services.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "createURLForImage(image:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BCAE2927-D0F3-489B-8B0D-7CDCB23FD76A - f193440fd9daedd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static FaceVideoApp.FileSystemServices.createURLForImage(image: __C.UIImage) -&gt; Swift.Optional&lt;Foundation.URL&gt;"
+                  moduleName = "FaceVideoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/najranemarah/Desktop/AllInOne/AppsOnGithab/FaceVideoApp/FaceVideoApp/ViewModels/Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "189"
+                  endingLineNumber = "189"
+                  offsetFromSymbolStart = "888">
+               </Location>
+               <Location
+                  uuid = "BCAE2927-D0F3-489B-8B0D-7CDCB23FD76A - 4203b97379dd17d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static FaceVideoApp.FileSystemServices.createURLForImage(image: __C.UIImage) -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "FaceVideoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/najranemarah/Desktop/AllInOne/AppsOnGithab/FaceVideoApp/FaceVideoApp/ViewModels/Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "198"
+                  endingLineNumber = "198"
+                  offsetFromSymbolStart = "2268">
+               </Location>
+               <Location
+                  uuid = "BCAE2927-D0F3-489B-8B0D-7CDCB23FD76A - 4203b97379dd17f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static FaceVideoApp.FileSystemServices.createURLForImage(image: __C.UIImage) -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "FaceVideoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/najranemarah/Desktop/AllInOne/AppsOnGithab/FaceVideoApp/FaceVideoApp/ViewModels/Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "2268">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC422F07-465B-4777-809D-A9C7E49938B9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FaceVideoApp/ViewModels/Services.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "deleteItemAt(url:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AC422F07-465B-4777-809D-A9C7E49938B9 - c07c5793fc9f4c20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static FaceVideoApp.FileSystemServices.deleteItemAt(url: Foundation.URL) -&gt; ()"
+                  moduleName = "FaceVideoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/najranemarah/Desktop/AllInOne/AppsOnGithab/FaceVideoApp/FaceVideoApp/ViewModels/Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "720">
+               </Location>
+               <Location
+                  uuid = "AC422F07-465B-4777-809D-A9C7E49938B9 - c07c5793fc9f4c20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static FaceVideoApp.FileSystemServices.deleteItemAt(url: Foundation.URL) -&gt; ()"
+                  moduleName = "FaceVideoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/najranemarah/Desktop/AllInOne/AppsOnGithab/FaceVideoApp/FaceVideoApp/ViewModels/Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "688">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
