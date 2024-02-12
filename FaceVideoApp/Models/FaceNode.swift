@@ -34,8 +34,8 @@ class FaceNode: SCNNode {
 extension FaceNode {
     
     func updatePosition(for vectors: [vector_float3]) {
-        var newPos = vectors.reduce(vector_float3(), +) / Float(vectors.count)
-        newPos.y += 0.0111
+        let newPos = vectors.reduce(vector_float3(), +) / Float(vectors.count)
+       // newPos.y += 0.0111
         position = SCNVector3(newPos)
     }
     

@@ -14,21 +14,21 @@ struct PlayerView: View {
      var videoTitle: String = "video tag"
     
     @State var animate = false
-       
+    @State var player: AVPlayer? = AVPlayer()
+
+     @State var showFullscreen = false
+    var url: URL
     // MARK: Lifecycle
 
     init(url: URL, videoTag: String) {
-           self.player = AVPlayer(url: url)
-        self.player.play()
+        self.url = url
+          
         self.videoTitle = videoTag
        }
 
        // MARK: Internal
 
-       var player: AVPlayer
-
-       @State var showFullscreen = false
-
+     
        var body: some View {
            VStack {
                videoView
@@ -36,12 +36,21 @@ struct PlayerView: View {
            }.fullScreenCover(isPresented: $showFullscreen) {
                videoView
            }
+           .onAppear(){
+               self.player = AVPlayer(url: url)
+            self.player!.play()
+           }
            .onDisappear(){
-               player.pause()
+               if player != nil,player!.timeControlStatus == .playing{
+                   player!.pause()
+                   player!.replaceCurrentItem(with: nil)
+                   player = nil
+               }
            }
            
            .frame(height: UIScreen.main.bounds.height)
            .background(.white)
+
        }
         
        // MARK: Private
@@ -55,20 +64,22 @@ struct PlayerView: View {
                    .foregroundStyle(.blue)
                    .multilineTextAlignment(.center)
                    .frame(width: UIScreen.main.bounds.width-150)
-               VideoPlayer(player: player) {
+               VideoPlayer(player: player) 
+               /*
+               {
                    if !showFullscreen {
                        ZStack {
-                           if player.timeControlStatus != .playing{
+                           if player != nil, player!.timeControlStatus != .playing{
                                Image(systemName: "play.circle")
                                    .resizable()
                                    .foregroundStyle(.white)
                                    .tint(.white)
                                    .frame(width: 50, height: 50)
                                    .hidden()
-                                   .onTapGesture {
-                                       player.play()
-                                       
-                                   }
+//                                   .onTapGesture {
+//                                       player.play()
+//                                       
+//                                   }
                                
                                Spacer()
                            }
@@ -77,10 +88,21 @@ struct PlayerView: View {
                        }
                    }
                }
-             
-               
+               */
+               .onAppear(){
+                   if self.player == nil{
+                       self.player = AVPlayer(url: url)
+                    self.player!.play()
+                 
+                   }
+                      
+               }
                .onDisappear(){
-                   player.pause()
+                   if player != nil,player!.timeControlStatus == .playing{
+                       player!.pause()
+                       player!.replaceCurrentItem(with: nil)
+                       player = nil
+                   }
                }
            }
        }

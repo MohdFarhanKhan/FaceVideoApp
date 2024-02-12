@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B2C9E882B51C14A005D9560 /* VideoTable+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C9E862B51C14A005D9560 /* VideoTable+CoreDataClass.swift */; };
-		7B2C9E892B51C14A005D9560 /* VideoTable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C9E872B51C14A005D9560 /* VideoTable+CoreDataProperties.swift */; };
 		7B2C9E8D2B520A45005D9560 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C9E8C2B520A45005D9560 /* PlayerView.swift */; };
+		7B5B7AF72B619C2500240502 /* VideoTable+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B7AF52B619C2500240502 /* VideoTable+CoreDataClass.swift */; };
+		7B5B7AF82B619C2500240502 /* VideoTable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B7AF62B619C2500240502 /* VideoTable+CoreDataProperties.swift */; };
 		7BD2D3D42B567B1F00686A61 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2D3D32B567B1F00686A61 /* HomeView.swift */; };
 		7BD2D3D82B567FA500686A61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2D3D72B567FA500686A61 /* AppDelegate.swift */; };
 		7BE080572B4FF8D1006CCB99 /* VideoRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE080562B4FF8D1006CCB99 /* VideoRecordViewController.swift */; };
@@ -27,9 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7B2C9E862B51C14A005D9560 /* VideoTable+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoTable+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		7B2C9E872B51C14A005D9560 /* VideoTable+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoTable+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		7B2C9E8C2B520A45005D9560 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		7B5B7AF52B619C2500240502 /* VideoTable+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VideoTable+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7B5B7AF62B619C2500240502 /* VideoTable+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VideoTable+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7BD2D3D32B567B1F00686A61 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7BD2D3D72B567FA500686A61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BD2D3D92B56853700686A61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -124,8 +124,8 @@
 		7BF27BBF2B4D7A7100B96307 /* CoredataSubClasses */ = {
 			isa = PBXGroup;
 			children = (
-				7B2C9E862B51C14A005D9560 /* VideoTable+CoreDataClass.swift */,
-				7B2C9E872B51C14A005D9560 /* VideoTable+CoreDataProperties.swift */,
+				7B5B7AF52B619C2500240502 /* VideoTable+CoreDataClass.swift */,
+				7B5B7AF62B619C2500240502 /* VideoTable+CoreDataProperties.swift */,
 			);
 			path = CoredataSubClasses;
 			sourceTree = "<group>";
@@ -232,9 +232,9 @@
 				7BD2D3D82B567FA500686A61 /* AppDelegate.swift in Sources */,
 				7BD2D3D42B567B1F00686A61 /* HomeView.swift in Sources */,
 				7BF27BCC2B4DEC1C00B96307 /* VideoViewModel.swift in Sources */,
-				7B2C9E882B51C14A005D9560 /* VideoTable+CoreDataClass.swift in Sources */,
+				7B5B7AF72B619C2500240502 /* VideoTable+CoreDataClass.swift in Sources */,
 				7BF27BB12B4D75FB00B96307 /* FaceVideoApp.xcdatamodeld in Sources */,
-				7B2C9E892B51C14A005D9560 /* VideoTable+CoreDataProperties.swift in Sources */,
+				7B5B7AF82B619C2500240502 /* VideoTable+CoreDataProperties.swift in Sources */,
 				7BF27BB92B4D791300B96307 /* PersistentStorage.swift in Sources */,
 				7B2C9E8D2B520A45005D9560 /* PlayerView.swift in Sources */,
 				7BE080572B4FF8D1006CCB99 /* VideoRecordViewController.swift in Sources */,

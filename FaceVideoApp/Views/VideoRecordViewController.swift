@@ -21,8 +21,8 @@ class VideoRecordViewController: UIViewController, AVCaptureAudioDataOutputSampl
     var startButton: UIButton?
     var stopButton: UIButton?
     var moustachOptions = [String]()
-    let features = ["mouthTopCenter"]
-    var featureIndices = [[ 24]]
+    let features = ["moustache"]
+    var featureIndices = [[ 1,0,2]]
     @ObservedObject var viewModel : VideoViewModel = VideoViewModel()
     var firstImage: UIImage?
     var videoRecordStatus = false
@@ -137,22 +137,20 @@ class VideoRecordViewController: UIViewController, AVCaptureAudioDataOutputSampl
                        guard self != nil else { return }
                        self!.lastTime = time
                        // VIDEO
-                       let image = (self?.sceneView.snapshot())!
-                       if self != nil, self!.firstImage == nil{
-                           self!.firstImage = image
-                       }
-                       self?.createPixelBufferFromUIImage(image: image , completionHandler: { (error, pixelBuffer)  in
-                           guard error == nil else {
-                                                     print("failed to get pixelBuffer")
-                                                     return
-                                                 }
-                           currentFrameTime = currentFrameTime - self!.videoStartTime!
-                           // Add pixel buffer to video input
-                        self!.pixelBufferAdaptor!.append(pixelBuffer!, withPresentationTime: currentFrameTime)
-                       })
-                       
-                      
-                      
+                     
+                           let image = (self?.sceneView.snapshot())!
+                           if self != nil, self!.firstImage == nil{
+                               self!.firstImage = image
+                           }
+                           self?.createPixelBufferFromUIImage(image: image , completionHandler: { (error, pixelBuffer)  in
+                               guard error == nil else {
+                                                         print("failed to get pixelBuffer")
+                                                         return
+                                                     }
+                               currentFrameTime = currentFrameTime - self!.videoStartTime!
+                               // Add pixel buffer to video input
+                            self!.pixelBufferAdaptor!.append(pixelBuffer!, withPresentationTime: currentFrameTime)
+                           })
                        
                    }
                }
@@ -288,6 +286,7 @@ class VideoRecordViewController: UIViewController, AVCaptureAudioDataOutputSampl
               self.endAudioRecording()
               self.finishVideoRecordingAndSave()
     }
+   
     @IBAction func startVideoRecording(_ sender: UIButton) {
         startRecording()
    
@@ -320,20 +319,23 @@ class VideoRecordViewController: UIViewController, AVCaptureAudioDataOutputSampl
                    $0.translatesAutoresizingMaskIntoConstraints = false
                }
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap))
+        
         sceneView.addGestureRecognizer(tap)
-      
+       
+        sceneView.autoenablesDefaultLighting = true
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        sceneView.session.run(faceConfiguration)
+           sceneView.session.run(faceConfiguration)
         
     }
    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
        sceneView.delegate = self
+       
    startButton = UIButton()
         startButton!.setImage(UIImage(systemName: "record.circle.fill"), for: .normal)
         startButton!.addTarget(self, action: #selector(startVideoRecording), for: .touchUpInside)
@@ -371,7 +373,7 @@ class VideoRecordViewController: UIViewController, AVCaptureAudioDataOutputSampl
         infoLabel!.widthAnchor.constraint(equalToConstant: 250).isActive = true
        
         infoLabel!.textAlignment = .center
-        infoLabel!.text = "Tap to moustache to change"
+        infoLabel!.text = "Tap the moustache to change"
         infoLabel!.textColor = UIColor.white
         var x = 90
         self.view.addSubview(infoLabel!)
@@ -428,12 +430,11 @@ extension VideoRecordViewController: ARSCNViewDelegate {
        
         let node = SCNNode(geometry: faceGeometry)
         node.geometry?.firstMaterial?.fillMode = .fill
+        node.geometry?.firstMaterial?.isDoubleSided = true
         node.geometry?.firstMaterial?.transparency = 0.0
         
-       
-        
         let noseNode = FaceNode(with: moustachOptions)
-        noseNode.name = "mouthTopCenter"
+        noseNode.name = "moustache"
     
         node.addChildNode(noseNode)
         
@@ -456,6 +457,7 @@ extension VideoRecordViewController: ARSCNViewDelegate {
             }
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+       
         didUpdateAtTime(time: time)
     }
     

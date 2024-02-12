@@ -38,8 +38,6 @@ struct VideoCell:View{
   
     func editTag(focused:Bool) {
         if  videoTag != "" , !focused {
-            
-           
                 DispatchQueue.main.async {
                     let newVideo = Video(id: self.video!.id, duration: self.video!.duration, tag: videoTag, video: self.video!.video, frontImage: self.video!.frontImage)
                     self.video = newVideo
@@ -47,8 +45,6 @@ struct VideoCell:View{
                     self.viewModel.updateVideo(video: newVideo)
                    
                 }
-               
-            
            
         }
           
@@ -104,16 +100,10 @@ struct VideoCell:View{
                 
             }
         }
-           
-//        .onTapGesture {
-//            videoTag = video!.tag!
-//            UIApplication.shared.endEditing()
-//                           
-//                       
-//        }
         .onAppear(){
             videoTag = video!.tag!
             playVideoId = nil
+           
         }
 
         .frame(width:self.videoSize.width, height: self.videoSize.height)
@@ -138,11 +128,8 @@ struct HomeView: View {
     @State var isNavigationBarHidden: Bool = true
     @State var playVideoId: UUID?
     @State var searchVideo: Video?
-    func changeVideo(video: Video){
-        
-    }
-    
-   
+    @State var animation = false
+    @State var helpTextShow = true
     var body: some View {
         NavigationView {
             VStack{
@@ -150,7 +137,7 @@ struct HomeView: View {
                 if viewModel.isLoading{
                     ProgressView()
                 }
-            
+               
                 if isPushActive{
 
                     NavigationLink(destination: PlayerView(url: self.url!, videoTag: videoTag).navigationBarTitle("")
@@ -160,18 +147,24 @@ struct HomeView: View {
                          EmptyView()
                     }.hidden()
                 }
-                
                
                
-                if  !self.viewModel.videos.isEmpty {
+               
+              //  if  !self.viewModel.videos.isEmpty {
                     ScrollView {
+                             
                         LazyVGrid(columns: columns, spacing: 20) {
                             ForEach(self.viewModel.videos){video in
+                                
                                 VideoCell( video: video, playVideoId: $playVideoId, searchVideo: $searchVideo)
                                     .contextMenu {
                                        
                                            Button {
+                                               if let index = self.viewModel.videos.firstIndex(where: {$0 == video}) {
+                                                   self.viewModel.videos.remove(at: index)
+                                               }
                                                viewModel.deleteVideo(video: video) { status in
+                                                   
                                                                       }
                                            } label: {
                                                
@@ -205,7 +198,7 @@ struct HomeView: View {
                         .padding(.bottom,  215)
                     }
                    
-                }
+                
                 Spacer()
                
                 
@@ -243,6 +236,7 @@ struct HomeView: View {
             .navigationBarBackButtonHidden(self.isNavigationBarHidden)
            
             .onAppear(){
+                helpTextShow = true
                 if isFromPlayerView {
                     isFromPlayerView = false
                 }
@@ -260,6 +254,9 @@ struct HomeView: View {
                     self.isNavigationBarHidden = false
                 }
 
+            }
+            .onDisappear(){
+                helpTextShow = false
             }
             .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
                 
@@ -284,6 +281,7 @@ struct HomeView: View {
                 UIApplication.shared.endEditing()
             })
             .navigationTitle(title)
+           
             .navigationBarHidden(self.isNavigationBarHidden)
             .toolbar {
                
@@ -295,6 +293,7 @@ struct HomeView: View {
                       
                             .scaledToFit()
                             .onTapGesture {
+                            
                                 viewModel.changeSelectedMoustachOptions()
                             }
                         Text("Tap to change")
@@ -302,6 +301,36 @@ struct HomeView: View {
                        
                     }
                 }
+                if helpTextShow,  !self.viewModel.videos.isEmpty {
+                    ToolbarItem(placement: .bottomBar) {
+                        HStack{
+                            Spacer()
+                            Text("Tap the tag to change")
+                                .font(.system(size: 13))
+                                .multilineTextAlignment(.center)
+                                .foregroundStyle(.black)
+                                .frame(height: 23)
+                                .bold()
+                                .background(RoundedRectangle(cornerRadius: 4).stroke())
+                                .animation(.linear(duration: 10.0).repeatForever(autoreverses: true))
+                                
+                                
+                                .onAppear(){
+                                  
+                                    withAnimation {
+                                        animation.toggle()
+                                    } completion: {
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 30.0) {
+                                           // helpTextShow = false
+                                        }
+                                       
+                                    }
+                                }
+                            
+                        }
+                    }
+                }
+                
                 ToolbarItem(placement: .topBarTrailing) {
                    
                     NavigationLink(destination: RecordView(mustachOptions: viewModel.getSelectedMoustachOptions())
@@ -309,9 +338,7 @@ struct HomeView: View {
                         ) {
                         VStack{
                             Image(systemName: "rectangle.inset.filled.badge.record")
-                               // .resizable()
-                               // .frame(width: 60, height: 25, alignment: .center)
-                               // .scaledToFit()
+                               
                                 .foregroundStyle(Color.black.opacity(0.8))
                               
                             Text("Recorder")
@@ -320,6 +347,7 @@ struct HomeView: View {
                               
                         }
                         }
+                       
                     
                 }
             }
